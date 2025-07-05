@@ -57,6 +57,10 @@ T(s) = \frac{P_{pend}(s) \cdot G_c(s)}
 {1 + P_{pend}(s) \cdot G_c(s)}
 $$
 
+## Purpose of using this system
+
+`cart_pole.m` is a script for experimenting a systems behavior using a simple PIDs controller.
+
 
 
 
