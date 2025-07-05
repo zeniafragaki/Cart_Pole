@@ -5,7 +5,7 @@ The inverted pendulum system is modeled using physical parameters and simulated 
 
 ---
 
-## ⚙ Parameters
+## Parameters
 
 The following constants are used:
 
