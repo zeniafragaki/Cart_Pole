@@ -3,7 +3,6 @@
 This project simulates the control of an inverted pendulum mounted on a cart using a **PID controller** in MATLAB.
 The inverted pendulum system is modeled using physical parameters and simulated using MATLAB’s Control Toolbox. A PID controller is designed and applied to stabilize the pendulum in the upright position.
 
----
 
 ## Parameters
 
@@ -16,7 +15,7 @@ The following constants are used:
 - Moment of inertia:I = 0.006 (kg·m^2) 
 - Acceleration due to gravity: g = 9.8 (m/s^2)
 
----
+
 
 ## System
 
@@ -28,7 +27,7 @@ $$
 q = (M + m)(I + m l^2) - (m l)^2
 $$
 
----
+
 
 ## Transfer Function of the Pendulum
 
@@ -39,7 +38,7 @@ P_{pend}(s) = \frac{m l s}
 {q s^3 + b (I + m l^2) s^2 - (M + m) m g l s - b m g l}
 $$
 
----
+
 
 ## PID Controller in Laplace Domain
 
