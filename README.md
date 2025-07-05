@@ -1,93 +1,99 @@
 # Inverted Pendulum Control with PID
 
-This project simulates an inverted pendulum on a cart using a **PID controller** in MATLAB.
-
-
----
-
-The inverted pendulum is a classic control problem involving a cart and a pole hinged to it. The goal is to keep the pole balanced by moving the cart.
-
-**Plant parameters:**
-
-- Mass of cart: \( \mathbf{M = 0.5} \, \text{kg} \)
-- Mass of pendulum: \( \mathbf{m = 0.2} \, \text{kg} \)
-- Friction coefficient: \( \mathbf{b = 0.1} \)
-- Pendulum length to center of mass: \( \mathbf{l = 0.3} \, \text{m} \)
-- Moment of inertia: \( \mathbf{I = 0.006} \, \text{kg·m}^2 \)
-- Gravity: \( \mathbf{g = 9.8} \, \text{m/s}^2 \)
+This project simulates the control of an inverted pendulum mounted on a cart using a **PID controller** in MATLAB.
+The inverted pendulum system is modeled using physical parameters and simulated using MATLAB’s Control Toolbox. A PID controller is designed and applied to stabilize the pendulum in the upright position.
 
 ---
 
-## 📐 Equations
+## ⚙️ Parameters
 
-### 📌 Intermediate Variable
+The following constants are used:
 
-\[
-\mathbf{q = (M + m)(I + m l^2) - (m l)^2}
-\]
-
----
-
-### 🚀 Transfer Function of the Pendulum Angle (output) w.r.t. Force (input)
-
-\[
-\mathbf{P_{pend}(s) = \frac{m l s}{q s^3 + b (I + m l^2) s^2 - (M + m) m g l s - b m g l}}
-\]
+- Mass of cart: \( M = 0.5 \, \text{kg} \)
+- Mass of pendulum: \( m = 0.2 \, \text{kg} \)
+- Friction coefficient: \( b = 0.1 \)
+- Pendulum length to center of mass: \( l = 0.3 \, \text{m} \)
+- Moment of inertia: \( I = 0.006 \, \text{kg·m}^2 \)
+- Acceleration due to gravity: \( g = 9.8 \, \text{m/s}^2 \)
 
 ---
 
-### 🎯 PID Controller
+## 🧮 Mathematical Model
 
-The PID controller used is:
+### Intermediate Expression
 
-\[
-\mathbf{Gc(s) = K_p + \frac{K_i}{s} + K_d s}
-\]
+The following term is used for simplification:
 
-with:
-
-- \( \mathbf{K_p = 100} \)
-- \( \mathbf{K_i = 0.1} \)
-- \( \mathbf{K_d = 10} \)
+$$
+q = (M + m)(I + m l^2) - (m l)^2
+$$
 
 ---
 
-## 🔁 Closed-Loop System
+### Transfer Function of the Pendulum
 
-The control is applied in a unity feedback configuration:
+The linearized transfer function from force input to pendulum angle \( \theta(s) \) is:
 
-\[
-\mathbf{T(s) = \frac{P_{pend}(s) \cdot G_c(s)}{1 + P_{pend}(s) \cdot G_c(s)}}
-\]
-
----
-
-## 📊 Simulation
-
-The script simulates the **impulse response** of the closed-loop system over a 20-second period.
-
-### 📈 Output:
-
-- Controlled variable: Pendulum angle \( \theta(t) \)
-- Simulation method: MATLAB Control Toolbox (using `tf`, `feedback`, `impulse`)
+$$
+P_{pend}(s) = \frac{m l s}
+{q s^3 + b (I + m l^2) s^2 - (M + m) m g l s - b m g l}
+$$
 
 ---
 
-## 📁 Files
+### PID Controller in Laplace Domain
 
-- `cart_pole.m` — Main simulation script
-- `README.md` — This file
+The PID controller is implemented as:
+
+$$
+G_c(s) = K_p + \frac{K_i}{s} + K_d s
+$$
+
+Where:
+
+- \( K_p = 100 \)
+- \( K_i = 0.1 \)
+- \( K_d = 10 \)
+
+---
+
+### Closed-Loop System
+
+A unity feedback configuration is used. The closed-loop transfer function is:
+
+$$
+T(s) = \frac{P_{pend}(s) \cdot G_c(s)}
+{1 + P_{pend}(s) \cdot G_c(s)}
+$$
+
+---
+
+## 🔬 Simulation
+
+The system is simulated using MATLAB's `impulse()` function over 20 seconds. The impulse response reflects the pendulum’s angle under controller influence.
+
+### Plot:
+
+- **Y-axis**: Pendulum angle \( \theta(t) \) in radians
+- **X-axis**: Time in seconds
+
+---
+
+## 📁 Files Included
+
+- `cart_pole.m`: Main MATLAB script for modeling and simulation
+- `README.md`: Project documentation
 
 ---
 
 ## ✅ Requirements
 
-- MATLAB (tested on R2023+)
+- MATLAB (tested on R2023a or later)
 - Control System Toolbox
 
 ---
 
-## 🔗 Resources
+## 📚 References
 
 - [CTMS - Inverted Pendulum](https://ctms.engin.umich.edu/CTMS/index.php?example=InvertedPendulum&section=SystemModeling)
 - [Wikipedia - Inverted Pendulum](https://en.wikipedia.org/wiki/Inverted_pendulum)
@@ -96,7 +102,6 @@ The script simulates the **impulse response** of the closed-loop system over a 2
 
 ## 📜 License
 
-MIT License (or your preferred one)
+MIT License (or insert your preferred license)
 
----
 
