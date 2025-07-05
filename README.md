@@ -5,7 +5,7 @@ The inverted pendulum system is modeled using physical parameters and simulated 
 
 ---
 
-## ⚙️ Parameters
+## ⚙ Parameters
 
 The following constants are used:
 
@@ -18,9 +18,9 @@ The following constants are used:
 
 ---
 
-## 🧮 Mathematical Model
+## System
 
-### Intermediate Expression
+## Intermediate Expression
 
 The following term is used for simplification:
 
@@ -30,7 +30,7 @@ $$
 
 ---
 
-### Transfer Function of the Pendulum
+## Transfer Function of the Pendulum
 
 The linearized transfer function from force input to pendulum angle \( \theta(s) \) is:
 
@@ -41,7 +41,7 @@ $$
 
 ---
 
-### PID Controller in Laplace Domain
+## PID Controller in Laplace Domain
 
 The PID controller is implemented as:
 
@@ -57,7 +57,7 @@ Where:
 
 ---
 
-### Closed-Loop System
+## Closed-Loop
 
 A unity feedback configuration is used. The closed-loop transfer function is:
 
