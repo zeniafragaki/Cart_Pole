@@ -59,7 +59,7 @@ $$
 
 ## Purpose of using this system
 
-`cart_pole.m` is a script for experimenting a systems behavior using a simple PIDs controller.
+`cart_pole.m` is a script for experimenting a systems behavior using a simple PID controller.Differences can be observed by changing the gains of the controller.
 
 
 
