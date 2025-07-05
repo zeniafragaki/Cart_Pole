@@ -66,42 +66,7 @@ T(s) = \frac{P_{pend}(s) \cdot G_c(s)}
 {1 + P_{pend}(s) \cdot G_c(s)}
 $$
 
----
 
-## 🔬 Simulation
 
-The system is simulated using MATLAB's `impulse()` function over 20 seconds. The impulse response reflects the pendulum’s angle under controller influence.
-
-### Plot:
-
-- **Y-axis**: Pendulum angle \( \theta(t) \) in radians
-- **X-axis**: Time in seconds
-
----
-
-## 📁 Files Included
-
-- `cart_pole.m`: Main MATLAB script for modeling and simulation
-- `README.md`: Project documentation
-
----
-
-## ✅ Requirements
-
-- MATLAB (tested on R2023a or later)
-- Control System Toolbox
-
----
-
-## 📚 References
-
-- [CTMS - Inverted Pendulum](https://ctms.engin.umich.edu/CTMS/index.php?example=InvertedPendulum&section=SystemModeling)
-- [Wikipedia - Inverted Pendulum](https://en.wikipedia.org/wiki/Inverted_pendulum)
-
----
-
-## 📜 License
-
-MIT License (or insert your preferred license)
 
 
