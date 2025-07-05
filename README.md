@@ -2,15 +2,8 @@
 
 This project simulates an inverted pendulum on a cart using a **PID controller** in MATLAB.
 
-![Inverted Pendulum Diagram](https://upload.wikimedia.org/wikipedia/commons/e/e5/InvertedPendulumAnimation.gif)
-
-## 🔧 Author
-**Zenia Fragaki**  
-GitHub: [@ZeniaFragaki](https://github.com/YourGitHubUsername)
 
 ---
-
-## 📋 System Overview
 
 The inverted pendulum is a classic control problem involving a cart and a pole hinged to it. The goal is to keep the pole balanced by moving the cart.
 
