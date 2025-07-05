@@ -9,12 +9,12 @@ The inverted pendulum system is modeled using physical parameters and simulated 
 
 The following constants are used:
 
-- Mass of cart: \( M = 0.5 \, \text{kg} \)
-- Mass of pendulum: \( m = 0.2 \, \text{kg} \)
-- Friction coefficient: \( b = 0.1 \)
-- Pendulum length to center of mass: \( l = 0.3 \, \text{m} \)
-- Moment of inertia: \( I = 0.006 \, \text{kg·m}^2 \)
-- Acceleration due to gravity: \( g = 9.8 \, \text{m/s}^2 \)
+- Mass of cart:  M = 0.5 (kg)
+- Mass of pendulum:  m = 0.2(kg)
+- Friction coefficient: b = 0.1
+- Pendulum length to center of mass: l = 0.3 (m)
+- Moment of inertia:I = 0.006 (kg·m^2) 
+- Acceleration due to gravity: g = 9.8 (m/s^2)
 
 ---
 
@@ -32,7 +32,7 @@ $$
 
 ## Transfer Function of the Pendulum
 
-The linearized transfer function from force input to pendulum angle \( \theta(s) \) is:
+The linearized transfer function from force input to pendulum angle theta is:
 
 $$
 P_{pend}(s) = \frac{m l s}
@@ -48,14 +48,6 @@ The PID controller is implemented as:
 $$
 G_c(s) = K_p + \frac{K_i}{s} + K_d s
 $$
-
-Where:
-
-- \( K_p = 100 \)
-- \( K_i = 0.1 \)
-- \( K_d = 10 \)
-
----
 
 ## Closed-Loop
 
