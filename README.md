@@ -3,7 +3,13 @@
 This project simulates the control of an inverted pendulum mounted on a cart using a **PID controller** in MATLAB.
 The inverted pendulum system is modeled using physical parameters and simulated using MATLAB’s Control Toolbox. A PID controller is designed and applied to stabilize the pendulum in the upright position.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8bd3c086-f811-45ed-8ea3-63b971fddc81" alt="Cart Pole" />
+</p>
 
+<p align="center">
+ Figure 1: Basic [Cart Pole Scheme](https://www.mathworks.com/help/symbolic/derive-and-simulate-cart-pole-system.html) 
+</p>
 ## Parameters
 
 The following constants are used:
