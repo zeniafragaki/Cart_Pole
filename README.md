@@ -8,8 +8,9 @@ The inverted pendulum system is modeled using physical parameters and simulated 
 </p>
 
 <p align="center">
- Figure 1: Basic [Cart Pole Scheme](https://www.mathworks.com/help/symbolic/derive-and-simulate-cart-pole-system.html)
+  <strong>Figure 1:</strong> Basic <a href="https://www.mathworks.com/help/symbolic/derive-and-simulate-cart-pole-system.html">Cart Pole Scheme</a>
 </p>
+
 
 ## Parameters
 
